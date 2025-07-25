@@ -1,0 +1,224 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.2;
+  background-color: #fff;
+}
+h1{
+   font-size: clamp(2rem,5vw, 5rem);
+   justify-content: center; 
+}
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+/* Desktop image */
+.pic-phone-desktop {
+  display: flex;
+  flex: 1;
+  min-width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic-phone-desktop img,
+.pic-phone-mobile img {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+}
+
+/* Mobile image */
+.pic-phone {
+  display: none;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.pTitle h1 {
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+/* Text styles */
+h1 {
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+.price,
+.applecardlink,
+.dropdown-container,
+.Color-detail,
+.detail-process,
+.installments,
+.availability {
+  text-align: justify;
+  margin: 1rem 0;
+}
+
+.link-blue {
+  color: #06c;
+  cursor: pointer;
+}
+.link-blue:hover {
+  text-decoration: underline;
+}
+.availability{
+  margin-left: 3px;
+}
+
+/* Dropdown */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.dropdown-container label {
+  font-size: 13px;
+  color: #888;
+}
+.dropdown-container select {
+  width: 20rem;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff url('data:image/svg+xml,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+  background-size: 16px;
+  appearance: none;
+  cursor: pointer;
+}
+.dropdown-container select:focus{
+  border-color: #0071E3;
+  outline: none;
+}
+/* Text styles */
+.pTitle h1 p{
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+/* Dots */
+.color-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 0;
+  max-width: 260px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+
+/* Icons and layout */
+.installments, .availability {
+  display: flex;
+  gap: 10px;
+}
+.installments i, .availability i {
+  font-size: 15px;
+  margin-top: 4px;
+  color: #000;
+}
+
+.button button {
+  padding: min(0.7rem);
+  max-width: 20rem;
+  font-size: 16px;
+  background-color:#0071E3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+.dot-midnightBlack   { background-color: #1a1a1a; }  /* near black */
+.dot-SummitStone     { background-color: #f8d8b3; }  /* light stone gray */
+.dot-Riptide-Blue    { background-color: #57a7a8; }  /* turquoise blue */
+.dot-Sunset-Purple   { background-color: #633980; }  /*Sunset Purple*/
+
+/* Responsive: Mobile */
+@media (max-width: 700px) {
+  .product {
+    display: flex;
+    flex-direction: center;
+    margin: 1rem;
+  }
+
+  /* Mobile shows image inline */
+  .pic-phone {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .pic-phone-desktop {
+    display: none;
+  }
+  .pTitle h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    max-width: 20rem;
+  }
+
+  .pic-phone img {
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .price,
+  .applecardlink,
+  .installments,
+  .availability {
+    font-size: 20px;
+  }
+
+  .dropdown-container select {
+    font-size: 20px;
+    max-width: 200px 100px;
+    width: 100%;
+  }
+
+  .dropdown-container label {
+    font-size: 11px;
+  }
+
+ .button button {
+    font-size: 13px;
+    max-width: 500px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}

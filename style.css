@@ -1,0 +1,244 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  background-color: #fff;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Desktop Bento Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 200px 50px 440px;
+  gap: 10px;
+  height: 100%;
+}
+
+.box {
+  background-color: rgb(238, 234, 234);
+  border-radius: 15px;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Grid positions */
+.box-1 {
+  grid-row: 1 / span 3;
+  grid-column: 1;
+}
+
+.box-2 {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 3;
+}
+
+.box-3 {
+  grid-column: 1;
+  grid-row: 4 / span 2;
+}
+
+.box-4 {
+  grid-column: 2;
+  grid-row: 4 / span 2;
+}
+
+.box-5 {
+  grid-column: 3;
+  grid-row: 4 / span 2;
+}
+.colored-dots {
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  flex-wrap: wrap;           
+  gap: 10px;
+  min-height: 24px;
+  padding: 10px 0;
+  max-width: 260px;
+  margin: 0 auto;            /
+}
+/* Image sizes preserved */
+.box-3 img,
+.box-4 img,
+.box-5 img {
+  max-width: 19em;
+  max-height: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+.box-4 img {
+  margin-top: 10px;
+  max-width: 19em;
+}
+
+.CasePhone img {
+  justify-content: center;
+  max-width: 15em;
+}
+
+.CasePhone {
+  margin-top: 5em;
+}
+
+.CasePhone2,
+.iPad-case,
+.Organizer-case,
+.airPod-case {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.CasePhone2 {
+  max-width: 800px;
+}
+
+.container img {
+  margin-top: 15px;
+}
+
+/* Text styling */
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.pTitle {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.4;
+  padding: 0 0.5em;
+  margin-top: 1em;
+}
+.Content-price,
+.Content-price2 {
+  margin-top: auto; 
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0066cc;
+}
+
+.price {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 0.5em;
+}
+.dot {
+  min-width: 15px;
+  min-height: 15px;
+  border-radius: 50%;
+  background-color: #ccc; /* Default color */
+  border: 1px solid #999;
+}
+/* Colored Dot Variants */
+.dot-peony           { background-color: #ff73b9 }  /* soft pink */
+.dot-periwinkle      { background-color: #7272cc; }  /* periwinkle */
+.dot-Aquamarin       { background-color: #6ed8b5; }  /* aquamarine */
+.dot-tangerine       { background-color: #ff8800f3; }  /* tangerine yellow-orange */
+.dot-star-Fruit      { background-color: #f1c40f; }  /* yellow (star fruit tone) */
+.dot-Ultramarin      { background-color: #163a9eec; }  /* ultramarine blue */
+
+.dot-midnightBlack   { background-color: #1a1a1a; }  /* near black */
+.dot-SummitStone     { background-color: #f8d8b3; }  /* light stone gray */
+.dot-Riptide-Blue    { background-color: #57a7a8; }  /* turquoise blue */
+.dot-Sunset-Purple   { background-color: #633980; }  /*Sunset Purple*/
+
+.dot-Sunrise-Pink     {background-color:  #fca397;}    /*Sunrise Pink*/
+.dot-twilight-blue    {background-color:#002175;}      /*twilight blue*/
+
+
+/* ---- Responsive Layout: Alternative Stack ---- */
+
+@media (max-width: 768px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .pTitle {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .title {
+    font-size: 1.5rem;
+    padding: 0 1em;
+  }
+
+  .pTitle {
+    font-size: 0.95rem;
+  }
+
+  .price {
+    font-size: 0.95rem;
+  }
+
+  .box {
+    padding: 1.2em;
+  }
+}

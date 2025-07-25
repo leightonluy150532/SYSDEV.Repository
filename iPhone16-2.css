@@ -1,0 +1,210 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  background-color: #fff;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: min(2rem);
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+/* Desktop image */
+.pic-phone-desktop {
+  display: flex;
+  flex:1;
+  min-width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic-phone-desktop img,
+.pic-phone img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile image */
+.pic-phone {
+  display: none;
+}
+
+/* Text styles */
+.pTitle h1 {
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+.price,
+.applecardlink,
+.dropdown-container,
+.detail-process,
+.installments,
+.availability{
+  margin: 1rem 0;
+}
+
+.link-blue {
+  color: #06c;
+  cursor: pointer;
+}
+.link-blue:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+.dropdown-container label {
+  font-size: 13px;
+  color: #888;
+}
+.dropdown-container select {
+  width: 20rem;
+  padding: min(12px);
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+.dropdown-container select:focus {
+  border: 2px solid #0071E3;
+  outline: none;
+}
+
+/* Dots */
+.color-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 0;
+  max-width: 260px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+
+/* Icons and layout */
+.installments, .availability {
+  display: flex;
+
+  gap: 10px;
+}
+.installments i, .availability i {
+  font-size: 15px;
+  margin-top: 4px;
+  color: #000;
+}
+
+.button button {
+  padding: min(0.7rem);
+  max-width: 20rem;
+  font-size: 16px;
+  background-color:#0071E3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+ .availability{
+  margin-left: 1px;
+}
+.dot-peony           { background-color: #ff73b9 }  /* soft pink */
+.dot-periwinkle      { background-color: #7272cc; }  /* periwinkle */
+.dot-Aquamarin       { background-color: #6ed8b5; }  /* aquamarine */
+.dot-tangerine       { background-color: #ff8800f3; }  /* tangerine yellow-orange */
+.dot-star-Fruit      { background-color: #f1c40f; }  /* yellow (star fruit tone) */
+.dot-Ultramarin      { background-color: #163a9eec; }  /* ultramarine blue */
+
+/* Responsive: Mobile */
+@media (max-width:765px) {
+  .product {
+    display: flex;
+    flex-direction: center;
+    margin: 1rem;
+  }
+
+  /* Mobile shows image inline */
+  .pic-phone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .pic-phone-desktop {
+    display: none;
+  }
+  h1,p {
+    font-size: 20px;
+  }
+
+
+  .pic-phone img {
+    max-width:500px;
+  }
+
+
+  .price,
+  .applecardlink,
+  .installments,
+  .availability {
+    font-size: 20px;
+  }
+
+  .dropdown-container select {
+    font-size: 20px;
+    max-width: 200px 100px;
+    width: 100%;
+  }
+
+  .dropdown-container label {
+    font-size: 11px;
+  }
+
+  .button button {
+    font-size: 13px;
+    max-width: 500px;;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
